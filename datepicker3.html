@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class='col-md-3'>
+            <form action="date.php" method="post" class="form">
+                <div class="form-group">
+                    <div class='input-group dp1'>
+                        <input type='text' class="form-control" name="startdate" id="start" >
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                    <button class="btn btn-primary">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <p>
+                Startdate is <?php echo $startdate; ?>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+   $('#input-date')
+  .datepicker()   
+  .on('changeDate', function(e){    
+    $('#formID').submit();
+  }); 
+</script>
